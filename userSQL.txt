@@ -1,0 +1,32 @@
+Below is what I used to make the database and two tables of users information.
+The INSERT statements are purely dumy data for now until I have the node.js working to connect them to the sign in page.
+
+
+
+
+create database users_db
+
+\c users_db
+
+CREATE TABLE IF NOT EXISTS user_info(
+id SERIAL PRIMARY KEY,
+first_name VARCHAR(20) NOT NULL,
+last_name VARCHAR(20) NOT NULL,
+email VARCHAR(50) NOT NULL,
+password VARCHAR(30) NOT NULL);
+
+CREATE TABLE IF NOT EXISTS user_profile(
+first_name VARCHAR(20),
+last_name VARCHAR(20),
+likes text[],
+allergies text[]);
+
+INSERT INTO user_info(first_name, last_name, email, password)
+VALUES ('Name1','Last1','email@fake.com','password1'),
+('Name2','Last2','email2@fake.com','password2'),
+('Name3','Last3','email3@fake.com','password3');
+
+INSERT INTO user_profile(first_name, last_name, likes, allergies)
+VALUES ('Name1','Last1','{"recipe1","recipe2"}','{"nuts","gluten"}'),
+('Name2','Last2','{"recipe3","recipe4"}','{"peanuts"}'),
+('Name3','Last3','{"recipe5","recipe6"}','{"eggs","shellfish"}');
