@@ -1,0 +1,22 @@
+{
+  "name": "login",
+  "version": "1.0.0",
+  "description": "Tinner login",
+  "main": "login.js",
+  "scripts": {
+    "test": "login"
+  },
+  "repository": {
+    "type": "git",
+    "url": "Tinner"
+  },
+  "keywords": [
+    "tinner"
+  ],
+  "author": "Ryan Kelly",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "pg-promise": "^9.3.3"
+  }
+}
