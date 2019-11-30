@@ -17,7 +17,19 @@ likes text[],
 allergies text[]);
 
 
-INSERT INTO user_profile(first_name, last_name, email, password, likes, allergies)
-VALUES ('Name1','Last1','email1@fake.com','password1','{"recipe1","recipe2"}','{"nuts","gluten"}'),
-('Name2','Last2','email2@fake.com','password2','{"recipe3","recipe4"}','{"peanuts"}'),
-('Name3','Last3','email3@fake.com','password3','{"recipe5","recipe6"}','{"eggs","shellfish"}');
+INSERT INTO user_profile(first_name, last_name, email, password, likes, allergies) 
+VALUES ('Name1','Last1','email1@fake.com','password1','{"recipe1","recipe2"}','{"nuts","gluten"}'),('Name2','Last2','email2@fake.com','password2','{"recipe3","recipe4"}','{"peanuts"}'),('Name3','Last3','email3@fake.com','password3','{"recipe5","recipe6"}','{"eggs","shellfish"}');
+
+
+// food db
+
+CREATE TABLE IF NOT EXISTS food(
+name VARCHAR(50) NOT NULL,
+cuisine VARCHAR (20),
+ingredients text[] NOT NULL,
+instructions text[],
+instructions-link text[],
+image bytea);
+
+INSERT INTO food(name, cuisine, ingredient, instructions, instructions-link, image)
+VALUES ()
