@@ -9,6 +9,15 @@
         <meta name = "viewpoint" content = "width = device-width, initial-scale=1">
         
         <title> Tinner </title>
+
+        <link
+          rel="stylesheet"
+          href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+        />
+        <link
+          rel="stylesheet"
+          href="node_modules/font-awesome/css/font-awesome.min.css"
+        />
         
         <link href = "https://fonts.googleapis.com/css?family=Roboto|Varela+Round" rel="stylesheet">
         <link rel = "stylesheet" href= "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -108,8 +117,10 @@
             <div class="btn-group">
                 <!--button class = "btn btn-success" style = "font-family: Varela round,serif;font-style:bold" type = "submit"> Yes </button>
                 <button class = "btn btn-danger" style = "font-family: Varela round,serif;font-style:bold" type = "submit"> Maybe Next Time </button-->
-                <input class="btn btn-primary btn-danger btn-lg" type="submit" value="Maybe Next Time..">
-                <input class="btn btn-primary btn-success btn-lg" type="submit" value="Sounds Delicious!">
+                <form action="/send" method="POST">
+                    <input class="btn btn-primary btn-danger btn-lg" type="submit" value="Maybe Next Time..">
+                    <input class="btn btn-primary btn-success btn-lg" type="submit" value="Sounds Delicious!">
+                </form>
             </div>
             
         </div>
