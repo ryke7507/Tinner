@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+  <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Tinner</title>
+      <link href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round" rel="stylesheet">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+      <link rel="stylesheet" type="text/css" href="profile_page.css">
+      <script type="text/javascript" src="./main_page.js"></script>
+      <script type="text/javascript" src="./profile_page.js"></script>
+</head>
+
+  <body>
+    <div class="container">
+          <div class="topnav">
+            <img src="./tinner-logo4.png" style="float:left" alt="Tinner Logo" width="170" height="52">
+            <a style= "float:right; font-family: Varela round,serif" href="#news">Logout</a>
+            <a style= "float:right; font-family: Varela round,serif" href="#contact">Food Options</a>
+            <a style= "float:right; font-family: Varela round,serif" href="#about">Home</a>
+          </div>
+
+        </div>
+    </div>
+
+    <div class="jumbotron jumbotron-fluid">
+
+      <!-- Button to click to show the modals of login or sign up-->
+      <div class="container">
+    		<br>
+    		<div class="row">
+    			<div class="col-4">
+    				<div class="card">
+    				  <div class="card-body mx-auto">
+    					<div class="dropdown">
+
+    					  <div id="player_selector" class="dropdown-menu" aria-labelledby="selectPlayerButton">
+    					  </div>
+    					</div>
+    				  </div>
+    				</div>
+    			</div>
+
+
+
+
+          <div class="card" style = "width: 18rem;" style = "length: 20rem">
+            <img id="profile picture" class="card-img-center" src="/Users/apple/Documents/CS/3308/Lab_Website/resources/img/temp_image.svg" alt="Profile picture" height="300px" width="270px">
+            <div class="card-body">
+            </div>
+          </div>
+
+          			</div>
+          			<div class="col-8">
+                  <table class = "table">
+                    <tr>
+                      <th style= "font-family: Varela round,serif; font-size:25px" href="#news" >Name<span id="name"></span></th>
+
+        						</tr>
+                    <tr>
+                      <th style= "font-family: Varela round,serif; font-size:25px" href="#news" >Age<span id="age"></span></th>
+        							<td><span id="p_year"></span></td>
+        						</tr>
+                    <tr>
+                      <th style= "font-family: Varela round,serif; font-size:25px" href="#news" >Email<span id="email"></span></th>
+        							<td><span id="p_year"></span></td>
+        						</tr>
+                    <tr>
+                      <th style= "font-family: Varela round,serif; font-size:25px" href="#news" >Allergy<span id="allergy"></span></th>
+        							<td><span id="p_year"></span></td>
+        						</tr>
+                    <tr>
+                      <th style= "font-family: Varela round,serif; font-size:25px" href="#news" >Profile Picture</th>
+        							<td><span id="p_year"></span></td>
+        						</tr>
+                    <tr>
+                      <th style= "font-family: Varela round,serif" href="#news">liked food</th>
+        							<td><span id="p_year"></span></td>
+        						</tr>
+          			</div>
+          		</div>
+
+          	</div>
+
+
+          <div id="id01" class="modal">
+
+            <form class="modal-content animate" action="/action_page.php" method="post">
+              <div class="imgcontainer">
+                <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                <img src="login_icon.png" alt="Avatar" class="avatar">
+              </div>
+
+              <div class="container">
+                <label for="uname"><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" name="uname" required>
+              </div>
+
+              <div class="container">
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+              </div>
+
+              <div class="container">
+                <button type="submit">Login</button>
+              </div>
+              <div class="container">
+                <label>
+                  <input type="checkbox" checked="checked" name="remember"> Remember me
+                </label>
+
+              </div>
+
+              <div class="container" style="background-color:#f1f1f1">
+                <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+              </div>
+
+              <div class="container">
+                <span class="psw">Forgot <a href="#">password?</a></span>
+              </div>
+            </form>
+          </div>
+        </div>
+
+    </div>
+
+
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+</html>
