@@ -26,4 +26,4 @@ VALUES ('Name1','Last1','email1@fake.com','password1','{"recipe1","recipe2"}','{
 CREATE TABLE IF NOT EXISTS food(name VARCHAR(50) NOT NULL, cuisine VARCHAR (20), ingredients text[] NOT NULL, instructions text[], instructionsLink text[], image bytea);
 
 INSERT INTO food(name, cuisine, ingredient, instructions, instructions-link, image)
-VALUES ()
+VALUES ('Milk Steak', 'Philedelphia', '{'1 medium 8.8oz. (.25Kg) flat iron steak (top blade shoulder steak)', '2 cup milk (preferably whole, called "4%")', '1/4 cup honey', '1/2 tsp cinnamon', '1/2 tsp nutmeg', '1 tsp vanilla extract', '1/2 cup Jelly Belly® jelly beans'}', '{https://www.wikihow.com/Make-Milk-Steak-With-Jelly-Beans}', NULL)
