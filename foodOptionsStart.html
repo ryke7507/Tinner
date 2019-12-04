@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<html>
+    
+    <head>
+        
+        <meta charset = "utf-8">
+        <meta http-equiv = "X-UA-Compatible" content = "IE = edge">
+        <meta name = "viewpoint" content = "width = device-width, initial-scale=1">
+        
+        <title> Tinner </title>
+        
+        <link href = "https://fonts.googleapis.com/css?family=Roboto|Varela+Round" rel="stylesheet">
+        <link rel = "stylesheet" href= "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel = "stylesheet" href= "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src = "https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"> </script>
+        <script src = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+        <link rel = "stylesheet" type = "text/css" href = "browserPage.css">
+        
+        <!--script type = "text/javascript" src = "./browserPage.js"></script-->
+        
+    </head>
+    
+    <body>
+        <!-- Top Navigation Bar -->
+        
+        <div class="container">
+          <div class="topnav">
+            <img src="./tinner-logo4.png" style="float:left" alt="Tinner Logo" width="170" height="52">
+            <a style= "float:right; font-family: Varela round,serif" class="active" href="#home">Sign Up</a>
+            <a style= "float:right; font-family: Varela round,serif" href="#news">Login</a>
+            <a style= "float:right; font-family: Varela round,serif" href="#contact">Food Options</a>
+            <a style= "float:right; font-family: Varela round,serif" href="#about">Home</a>
+          </div>
+        </div>
+
+        <!-- Selective Categories + Randomized Categories -->
+        
+        <div class = "jumbotron jumbotron-fluid">
+            
+            <form class="form-inline mr-auto">
+                <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+            </form>
+            
+            <div id = "accordion">
+                <div class="card">
+                    
+                    <div class="card-header" id="headingOne">
+                        <h5 class="mb-0">
+                            <button class="btn btn-danger collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Selective Categories
+                            </button>
+                        </h5>
+                    </div>
+                    
+                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                        
+                        <div class="card-body">
+                            
+                            <input class = "btn btn-warning" type= "submit" value= "African">
+                            <input class = "btn btn-warning" type= "submit" value= "American">
+                            <input class = "btn btn-warning" type= "submit" value= "Asian">
+                            <input class = "btn btn-warning" type= "submit" value= "Brazilian">
+                            <input class = "btn btn-warning" type= "submit" value= "Caribbean">
+                            <input class = "btn btn-warning" type= "submit" value= "Chinese">
+                            <input class = "btn btn-warning" type= "submit" value= "French">
+                            <input class = "btn btn-warning" type= "submit" value= "Greek">
+                            <input class = "btn btn-warning" type= "submit" value= "Indian">
+                            <input class = "btn btn-warning" type= "submit" value= "Indian">
+                            <input class = "btn btn-warning" type= "submit" value= "Irish">
+                            <input class = "btn btn-warning" type= "submit" value= "Italian">
+                            <input class = "btn btn-warning" type= "submit" value= "Jamaican">
+                            <input class = "btn btn-warning" type= "submit" value= "Mediterranean">
+                            <input class = "btn btn-warning" type= "submit" value= "Mexican">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
+           
+            <div class="card">
+                <h5 class="mb-0">
+                    <button class="btn btn-danger" type="submit">
+                        Randomized Category
+                    </button>
+                </h5>
+            </div>
+           
+        </div>
+        
+        <!-- . . . . . . .  -->
+        
+        
+        
+    </body>
+    
+    <!--     Sticky Footer      -->
+    
+    <body class = "d-flex flex-column">
+        <footer id = "sticky-footer" class = "py-4 bg-light text-white-50">
+            <div class ="container text-center">
+                <medium> Powered by &#8902 0100 </medium>
+            </div>
+        </footer>
+    </body>
+    
+</html>

@@ -62,10 +62,16 @@ app.get('/browserPage', (req, res) => {
     res.sendFile(path.join(__dirname + '/browserPage.html'));
 });
 
+app.get('/foodOptions', (req, res) => {
+    res.sendFile(path.join(__dirname + '/foodOptionsStart.html'));
+});
+
 
 //write to db when hitting sounds delecious button
 app.post("/send", function(req, res) {
 	console.log(req.body);
 })
+
+app.use(express.static(__dirname + '/'));
 
 app.listen(3000)
