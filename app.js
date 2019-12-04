@@ -62,9 +62,13 @@ app.get('/browserPage', (req, res) => {
     res.sendFile(path.join(__dirname + '/browserPage.html'));
 });
 
-app.get('/foodOptions', (req, res) => {
+app.get('/foodOptionsStart', (req, res) => {
     res.sendFile(path.join(__dirname + '/foodOptionsStart.html'));
 });
+
+app.get('/profile', (req, res) => {
+    res.sendFile(path.join(__dirname + '/profile_page.html'))
+})
 
 
 //write to db when hitting sounds delecious button
