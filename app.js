@@ -1,8 +1,15 @@
 const express = require('express');
 const path = require('path');
 const { Pool, Client } = require('pg'); //package for handling postgress
-const keys = require('./keys')  // get spoonacular api key
+const keys = require('./keys');  // get spoonacular api key
+const pgPromise = require('pg-promise');
+const nodeFetch = require('node-fetch');
+const bodyParser = require('body-parser'); // Add the body-parser tool has been added
+const unirest = require('unirest');
+
 const app = express()
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 const API_KEY = keys.spoonacularKey;
 
@@ -20,35 +27,15 @@ const API_KEY = keys.spoonacularKey;
 // PSQL Connectors, still not sure what this is doing.
 // https://spoonacular.com/food-api/docs#Search-Recipes
 
-// const pool = new Pool({
-//   user: 'dbuser',
-//   host: 'come back',	//coming back to this
-//   database: 'users_db',
-//   password: 'come back',
-//   port: 3211,
-// })
+// const dbInfo = {
+// 	host: 'localhost',
+// 	port: 4000,
+// 	database: 'food',
+// 	user: 'postgres',
+// 	password: 'secure-password69'
+// };
 
-
-// pool.query('SELECT NOW()', (err, res) => {
-//   console.log(err, res)
-//   pool.end()
-// })
-
-
-// const client = new Client({
-//   user: 'dbuser',
-//   host: 'come back',
-//   database: 'users_db',
-//   password: 'secretpassword',
-//   port: 3211,
-// })
-
-// client.connect()
-
-// client.query('SELECT NOW()', (err, res) => {
-//   console.log(err, res)
-//   client.end()
-// })
+// let database = pgPromise(dbInfo);
 
 app.get('/spoonacular/search', (req, res) => {
     req.send
@@ -70,6 +57,23 @@ app.get('/profile', (req, res) => {
     res.sendFile(path.join(__dirname + '/profile_page.html'))
 })
 
+app.get('/randomRecipe', (req, res) => {
+    const randomizer = Math.floor(Math.random() * 10 + 1);
+    let requestString = `https://api.spoonacular.com/recipes/random?number=${randomizer}&${API_KEY}`;
+
+    unirest.get(requestString)
+    .then(res => {
+        // return res.json();
+        console.log('res: ', res.body)
+    })
+    .then(data =>{
+        res.sendFile(path.join(__dirname + '/randomRecipe.html'),{
+        my_title: "recipe",
+        data: data.recipes
+        })
+    })
+})
+
 
 //write to db when hitting sounds delecious button
 app.post("/send", function(req, res) {
@@ -78,4 +82,4 @@ app.post("/send", function(req, res) {
 
 app.use(express.static(__dirname + '/'));
 
-app.listen(3000)
+app.listen(3000);
