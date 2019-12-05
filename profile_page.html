@@ -15,6 +15,7 @@
       <link rel="stylesheet" type="text/css" href="profile_page.css">
       <script type="text/javascript" src="./main_page.js"></script>
       <script type="text/javascript" src="./profile_page.js"></script>
+      <script src="./profile_page.js"></script>
 </head>
 
   <body>
@@ -27,7 +28,6 @@
           </div>
 
         </div>
-    </div>
 
     <div class="jumbotron jumbotron-fluid">
 
@@ -35,7 +35,7 @@
       <div class="container">
     		<br>
     		<div class="row">
-    			<div class="col-4">
+    			<div class="col-6">
     				<div class="card">
     				  <div class="card-body mx-auto">
     					<div class="dropdown">
@@ -60,72 +60,41 @@
           			<div class="col-8">
                   <table class = "table">
                     <tr>
-                      <th style= "font-family: Varela round,serif; font-size:25px" href="#news" >Name<span id="name"></span></th>
+                      <th style= "font-family: Varela round,serif; font-size:25px" href="#news" >Name<span id="name"></span>
+                        <input type="text" class="form-control" id="username" placeholder="user name"  disabled>
+                      </th>
 
         						</tr>
                     <tr>
-                      <th style= "font-family: Varela round,serif; font-size:25px" href="#news" >Age<span id="age"></span></th>
+                      <th style= "font-family: Varela round,serif; font-size:25px" href="#news" >Age<span id="age"></span>
+                      <input type="text" class="form-control" id="myage" placeholder="age" disabled></th>
+
+        						</tr>
+                    <tr>
+                      <th style= "font-family: Varela round,serif; font-size:25px" href="#news" >Email<span id="email"></span>
+                      <input type="text" class="form-control" id="myemail" placeholder="email" disabled></th>
         							<td><span id="p_year"></span></td>
         						</tr>
                     <tr>
-                      <th style= "font-family: Varela round,serif; font-size:25px" href="#news" >Email<span id="email"></span></th>
+                      <th style= "font-family: Varela round,serif; font-size:25px" href="#news" >Allergy<span id="allergy"></span>
+                      <input type="text" class="form-control" id="myallergy" placeholder="allergy" disabled></th>
         							<td><span id="p_year"></span></td>
         						</tr>
                     <tr>
-                      <th style= "font-family: Varela round,serif; font-size:25px" href="#news" >Allergy<span id="allergy"></span></th>
+                      <th style= "font-family: Varela round,serif; font-size:25px" href="#news" >liked food</th>
         							<td><span id="p_year"></span></td>
         						</tr>
-                    <tr>
-                      <th style= "font-family: Varela round,serif; font-size:25px" href="#news" >Profile Picture</th>
-        							<td><span id="p_year"></span></td>
-        						</tr>
-                    <tr>
-                      <th style= "font-family: Varela round,serif" href="#news">liked food</th>
-        							<td><span id="p_year"></span></td>
-        						</tr>
-          			</div>
+
+                <div class="form-group row">
+            	    <div class="col-sm-5 ">
+            	      <button type="button" style="font-size: 15px" class="btn btn-primary" onclick="info_change()">Edit profile</button>
+                    <button type="button" class="btn btn-primary" onclick="save_change()">Save changes</button>
+            	    </div>
+            	  </div>
+                </div>
           		</div>
 
           	</div>
-
-
-          <div id="id01" class="modal">
-
-            <form class="modal-content animate" action="/action_page.php" method="post">
-              <div class="imgcontainer">
-                <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-                <img src="login_icon.png" alt="Avatar" class="avatar">
-              </div>
-
-              <div class="container">
-                <label for="uname"><b>Username</b></label>
-                <input type="text" placeholder="Enter Username" name="uname" required>
-              </div>
-
-              <div class="container">
-                <label for="psw"><b>Password</b></label>
-                <input type="password" placeholder="Enter Password" name="psw" required>
-              </div>
-
-              <div class="container">
-                <button type="submit">Login</button>
-              </div>
-              <div class="container">
-                <label>
-                  <input type="checkbox" checked="checked" name="remember"> Remember me
-                </label>
-
-              </div>
-
-              <div class="container" style="background-color:#f1f1f1">
-                <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-              </div>
-
-              <div class="container">
-                <span class="psw">Forgot <a href="#">password?</a></span>
-              </div>
-            </form>
-          </div>
         </div>
 
     </div>
@@ -136,4 +105,30 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 </head>
+<body>
+  <script>
+  function info_change()
+  {
+    document.getElementById('username').disabled = false;
+    document.getElementById('myage').disabled = false;
+    document.getElementById('myemail').disabled = false;
+    document.getElementById('myallergy').disabled = false;
+  }
+  function save_change()
+  {
+    if (document.getElementById('username').disabled == true)
+    {
+      alert("No changes to save.");
+    }
+    else {
+      document.getElementById('username').disabled = true;
+      document.getElementById('myage').disabled = true;
+      document.getElementById('myemail').disabled = true;
+      document.getElementById('myallergy').disabled = true;
+    }
+
+  }
+</script>
+
+</body>
 </html>
