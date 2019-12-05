@@ -59,17 +59,21 @@ app.get('/profile', (req, res) => {
 
 app.get('/randomRecipe', (req, res) => {
     const randomizer = Math.floor(Math.random() * 10 + 1);
-    let requestString = `https://api.spoonacular.com/recipes/random?number=${randomizer}&${API_KEY}`;
+    let randomRecipe = {};
 
-    unirest.get(requestString)
-    .then(res => {
-        // return res.json();
-        console.log('res: ', res.body)
-    })
-    .then(data =>{
+    const request = unirest("GET", "https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/random")
+    request.query({
+        "q": `${randomizer}`
+    });
+    request.headers({
+        "x-rapidapi-host": "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com",
+        "x-rapidapi-key": "d92f1966f5msh90f9f2ce18774fdp13f36bjsn8aad0db9b6f8"
+    });
+    request.end((response) => {
+        if (response.error) console.error('Error my dude: ', response.error);
         res.sendFile(path.join(__dirname + '/randomRecipe.html'),{
-        my_title: "recipe",
-        data: data.recipes
+            my_title: "recipe",
+            data: response.body
         })
     })
 })
