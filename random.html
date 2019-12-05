@@ -127,31 +127,91 @@
                             </button>
 
                             <div class = "text-center">
-                                <h3 class="modal-title"> Tapioca Crepe </h3>
+                                <h3 class="modal-title"> Pizza </h3>
                             </div>
                         </div>
 
                         <div class="modal-body">
-                            <p><small>The tapioca crepe (/ˌtæpiˈoʊkə/; Portuguese: [tapiˈɔkɐ]) was a typical
-                            food in the northeast of Brazil, but recently became popular in many other coastal
-                            cities. It’s often served at small street stalls as savory with cheese, tomato
-                            and ham or as a sweet with chocolate, strawberries, bananas and nuts.</small></p>
+                            <p><small>Pizza (Italian: [ˈpittsa], Neapolitan: [ˈpittsə]) is a savory dish of Italian origin, consisting of a usually round,
+                            flattened base of leavened wheat-based dough topped with tomatoes, cheese, and often various other ingredients
+                            (anchovies, olives, meat, etc.) baked at a high temperature, traditionally in a wood-fired oven.
+                            A small pizza is sometimes called a pizzetta.</small></p>
+                            <br><br><br>
 
-                            <p><small> Click <em> 'Sounds Delicious!' </em> for the recipe! </small></p>
+                            <img src="./Foods/pizza_ingredient.png" alt="Pizza" width = "580" height = "300">
+                            <br><br><br><br>
+                            <img src="./Foods/pizza_direction.png" alt="Pizza" width = "580" height = "500">
+                            <br><br><br>
+                            
+                            <p><medium> <em> Refer </em> a friend this recipe! </medium></p>
+                            <br>
+                            
+                        <div class="btn-group">
+                        <!-- <form method="POST"> -->
+                            <!-- <input class="btn btn-warning btn-lg btn-block" type="submit" value="Click me to refer to your friend!"> -->
+
+                            <button type= "button" class="btn btn-warning btn-lg btn-block" data-toggle = "modal" data-target="#exampleModalCenter1">
+                                <p>Click me to refer to your friend!</p>
+                            </button>
+
+                            <div class="modal fade" id= "exampleModalCenter1" tabindex="-1" role= "dialog" aria-labelledby = "exampleModalCenter1Title" aria-hidden = "true">
+                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                    <div class="modal-content">
+
+                                        <div class="modal-header">
+
+                                            <button type = "button" class= "close" data-dismiss= "modal" aria-label= "Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+
+                                            <div class = "text-center">
+                                                <h3 class="modal-title"> Refer a friend </h3>
+                                            </div>
+                                        </div>
+
+                                        <div class="modal-body">
+
+                                            <p><large> Email: </large> </p><br>
+                                            <input type="text" name="email" size="35">
+                                            <br><br><br><br>
+                                            <p><large> Link: </large> </p><br>
+                                            <input type="text" name="link" value = "https://www.tasteofhome.com/recipes/homemade-pizza/" size="35">
+                                            <br><br><br><br>
+                                            <div class="popup" onclick="myFunction()"> <button> <medium>Submit </medium> </button>
+                                              <span class="popuptext" id="myPopup">Hope your friend likes it!</span>
+                                            </div>
+
+                                            <script>
+                                            // When the user clicks on div, open the popup
+                                            function myFunction() {
+                                              var popup = document.getElementById("myPopup");
+                                              popup.classList.toggle("show");
+                                            }
+                                            </script>
+
+
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        <!-- </form> -->
+
+                        </div>
                         </div>
 
                     </div>
                 </div>
             </div>
 
-            <p style = "font-family: Varela round,serif;font-style:bold" class="text-white"> Make <em> Tapioca Crepe </em> from scratch? </p>
+            <p style = "font-family: Varela round,serif;font-style:bold" class="text-white"> Make <em> pizza </em> from scratch? </p>
 
             <div class="btn-group">
                 <form action="/send" method="POST">
-                    <a class = "btn btn-primary btn-danger btn-lg" type="submit" href = 'pizza.html'> Maybe Next Time.. </a>
+                    <a class = "btn btn-primary btn-danger btn-lg" type="submit" href = 'jerkChicken.html'> Maybe Next Time.. </a>
                     <a class = "btn btn-primary btn-info btn-lg" type="submit" onclick = "popup()"> I like this food! </a>
-                    <a class = "btn btn-primary btn-success btn-lg" type="submit" href = 'pizza.html'> Sounds Delicious! </a>
-
+                    <a class = "btn btn-primary btn-success btn-lg" type="submit" href = 'jerkChicken.html'> Sounds Delicious! </a>
                 </form>
             </div>
 
