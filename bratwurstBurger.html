@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+
+        <meta charset = "utf-8">
+        <meta http-equiv = "X-UA-Compatible" content = "IE = edge">
+        <meta name = "viewpoint" content = "width = device-width, initial-scale=1">
+
+        <title> Tinner </title>
+
+        <link href = "https://fonts.googleapis.com/css?family=Roboto|Varela+Round" rel="stylesheet">
+        <link rel = "stylesheet" href= "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel = "stylesheet" href= "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src = "https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"> </script>
+        <script src = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+        <link rel = "stylesheet" type = "text/css" href = "bratwurstBurger.css">
+
+        <!--script type = "text/javascript" src = "./browserPage.js"></script-->
+
+    </head>
+
+    <body>
+        <!-- Top Navigation Bar -->
+
+        <div class="container">
+          <div class="topnav">
+            <img src="./tinner-logo4.png" style="float:left" alt="Tinner Logo" width="170" height="52">
+            <a style="float:right; font-family: Varela round, serif" href = 'profile_page.html'> Profile </a>
+            <a style="float:right; font-family: Varela round, serif" class="active" href= 'main_page.html'>Sign Up</a>
+            <a style="float:right; font-family: Varela round, serif" href='main_page.html'>Login</a>
+            <a style="float:right; font-family: Varela round, serif" href = 'browserPage.html'> Browse </a>
+            <a style="float:right; font-family: Varela round, serif" href= 'main_page.html'>Home</a>
+          </div>
+        </div>
+
+        <!-- Button to click to show the modals of login or sign up-->
+        <div class="align-center">
+                <div id="id01" class="modal">
+                  <form class="modal-content animate" action="/action_page.php" method="post">
+                    <div class="imgcontainer">
+                      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                      <img src="login_icon.png" alt="Avatar" class="avatar">
+                    </div>
+
+                    <div class="container">
+                      <label for="uname"><b>Username</b></label>
+                      <input type="text" placeholder="Enter Username" name="uname" required>
+                    </div>
+
+                    <div class="container">
+                      <label for="psw"><b>Password</b></label>
+                      <input type="password" placeholder="Enter Password" name="psw" required>
+                    </div>
+
+                    <div class="container">
+                      <button type="submit">Login</button>
+                    </div>
+
+                    <div class="container">
+                      <label>
+                        <input type="checkbox" checked="checked" name="remember"> Remember me
+                      </label>
+
+                    </div>
+
+                    <div class="container" style="background-color:#f1f1f1">
+                      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                    </div>
+
+                    <div class="container">
+                      <span class="psw">Forgot <a href="#">password?</a></span>
+                    </div>
+                  </form>
+                </div>
+              </div>
+
+        <!--                   -->
+
+        <!-- The 'Likes' and 'Dislikes' section -->
+
+        <!--
+
+        <div class = "jumbotron jumbotron-fluid">
+
+            <div class= "thumbnail">
+                <img src="./Foods/pizza.png" alt="Pizza" width = "500" height = "500">
+                <h3 style = "font-family: Varela round,serif;font-style:bold" class="text-white"> Pizza </h3>
+
+                <p style = "font-family: Varela round,serif;font-style:bold" class="text-white"> Pizza (Italian: [ˈpittsa], Neapolitan:
+                [ˈpittsə]) is a savory dish of Italian origin, consisting of a usually round, flattened base of leavened wheat-based dough
+                topped with tomatoes, cheese, and often various other ingredients (anchovies, olives, meat, etc.) baked at a high temperature,
+                traditionally in a wood-fired oven. A small pizza is sometimes called a pizzetta. </p>
+
+                <p style = "font-family: Varela round,serif;font-style:bold" class="text-white"> Make <em> pizza </em> from scratch? </p>
+
+                <div class="btn-group">
+                    <button class = "btn" style = "font-family: Varela round,serif;font-style:bold"> Yes </button>
+                    <button class = "btn" style = "font-family: Varela round,serif;font-style:bold"> Maybe Next Time </button>
+                </div>
+
+            </div>
+
+        </div>
+
+        -->
+
+    <!--                       -->
+
+    <!-- Button trigger for Modal + the Modal + 'Maybe Next Time' & 'Sounds Delicious!' buttons-->
+    <div class = "jumbotron jumbotron-fluid">
+
+        <button type= "button" class="btn btn-link" data-toggle = "modal" data-target="#exampleModalCenter">
+            <img src="./Foods/bratwurstBurger.jpg" alt="bratwurstBurger" width = "400" height = "250">
+        </button>
+
+
+        <div class="modal fade" id= "exampleModalCenter" tabindex="-1" role= "dialog" aria-labelledby = "exampleModalCenterTitle" aria-hidden = "true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+
+                    <div class="modal-header">
+
+                        <button type = "button" class= "close" data-dismiss= "modal" aria-label= "Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+
+                        <div class = "text-center">
+                            <h3 class="modal-title"> Bratwurst Burgers with Braised Onions </h3>
+                        </div>
+                    </div>
+
+                    <div class="modal-body">
+                        <p><small>Bratwurst (German: [ˈbʁaːtvʊɐ̯st]) is a type of German sausage made from
+                          veal, beef, or most commonly pork. The name is derived from the Old High German Brätwurst,
+                          from brät-, finely chopped meat, and Wurst, sausage, although in modern German it is often
+                          associated with the verb braten, to pan fry or roast.[1] Beef and veal are usual in halal and
+                          kosher bratwurst, which never include pork for religious reasons.</small></p>
+                        <br><br><br>
+
+                        <img src="./Foods/bratwurstBurger_ingredient.png" alt="BratwurstBurger" width = "580" height = "400">
+                        <br><br><br><br>
+                        <img src="./Foods/bratwurstBurger_direction.png" alt="BratwurstBurger" width = "580" height = "400">
+                        <br><br><br>
+
+                        <p><medium> <em> Refer </em> a friend this recipe! </medium></p>
+                        <br>
+                        <div class="btn-group">
+                            <!-- <form method="POST"> -->
+                                <!-- <input class="btn btn-warning btn-lg btn-block" type="submit" value="Click me to refer to your friend!"> -->
+
+                                <button type= "button" class="btn btn-warning btn-lg btn-block" data-toggle = "modal" data-target="#exampleModalCenter1">
+                                    <p>Click me to refer to your friend!</p>
+                                </button>
+
+                                <div class="modal fade" id= "exampleModalCenter1" tabindex="-1" role= "dialog" aria-labelledby = "exampleModalCenter1Title" aria-hidden = "true">
+                                    <div class="modal-dialog modal-dialog-centered" role="document">
+                                        <div class="modal-content">
+
+                                            <div class="modal-header">
+
+                                                <button type = "button" class= "close" data-dismiss= "modal" aria-label= "Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+
+                                                <div class = "text-center">
+                                                    <h3 class="modal-title"> Refer a friend </h3>
+                                                </div>
+                                            </div>
+
+                                            <div class="modal-body">
+
+                                                <p><large> Email: </large> </p><br>
+                                                <input type="text" name="email" size="35">
+                                                <br><br><br><br>
+                                                <p><large> Link: </large> </p><br>
+                                                <input type="text" name="link" value = "https://www.tasteofhome.com/recipes/bratwurst-burgers-with-braised-onions/" size="35">
+                                                <br><br><br><br>
+                                                <div class="popup" onclick="myFunction()"> <button> <medium>Submit </medium> </button>
+                                                  <span class="popuptext" id="myPopup">Hope your friend likes it!</span>
+                                                </div>
+
+                                                <script>
+                                                // When the user clicks on div, open the popup
+                                                function myFunction() {
+                                                  var popup = document.getElementById("myPopup");
+                                                  popup.classList.toggle("show");
+                                                }
+                                                </script>
+
+
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            <!-- </form> -->
+
+                        </div>
+
+
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <p style = "font-family: Varela round,serif;font-style:bold" class="text-white"> Make <em> Bratwurst Burger with Braised Onions </em> from scratch? </p>
+
+        <div class="btn-group">
+            <form action="/send" method="POST">
+                <a class = "btn btn-primary btn-danger btn-lg" type="submit" href = '.html'> Maybe Next Time.. </a>
+                <a class = "btn btn-primary btn-success btn-lg" type="submit" href = '.html'> Sounds Delicious! </a>
+            </form>
+        </div>
+
+    </div>
+    <!--                   -->
+
+
+    </body>
+
+    <!--     Sticky Footer      -->
+
+    <body class = "d-flex flex-column">
+        <footer id = "sticky-footer" class = "py-4 bg-light text-white-50">
+            <div class ="container text-center">
+                <medium> Powered by &#8902 0100 </medium>
+            </div>
+        </footer>
+    </body>
+
+</html>
