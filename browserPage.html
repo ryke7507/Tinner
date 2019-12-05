@@ -11,7 +11,7 @@
         <link rel = "stylesheet" href= "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <script src = "https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"> </script>
         <script src = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        <link rel = "stylesheet" type = "text/css" href = "foodOptionsStart.css">
+        <link rel = "stylesheet" type = "text/css" href = "browserPage.css">
         <!--script type = "text/javascript" src = "./browserPage.js"></script-->
     </head>
     <body>
@@ -19,6 +19,7 @@
         <div class="container">
           <div class="topnav">
             <img src="./tinner-logo4.png" style="float:left" alt="Tinner Logo" width="170" height="52">
+            <a style="float:right; font-family: Varela round, serif" href = 'profile_page.html'> Profile </a>
             <a style="float:right; font-family: Varela round, serif" class="active" href= 'main_page.html'>Sign Up</a>
             <a style="float:right; font-family: Varela round, serif" href='main_page.html'>Login</a>
             <a style="float:right; font-family: Varela round, serif" href= 'main_page.html'>Home</a>
@@ -71,8 +72,16 @@
             <form class="form-inline mr-auto">
                 <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
             </form>
+            
+            <div class="card">
+                <h5 class="mb-0">
+                    <a class = "btn btn-danger" type= "submit" href='random.html'> Randomized Category </a>
+                </h5>
+            </div>
+            
             <div id = "accordion">
                 <div class="card">
+                    
                     <div class="card-header" id="headingOne">
                         <h5 class="mb-0">
                             <button class="btn btn-danger collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
@@ -80,30 +89,26 @@
                             </button>
                         </h5>
                     </div>
+                    
                     <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
                         <div class="card-body">
-                            <a class = "btn btn-warning" type= "submit" href='.html'>African</a>
-                            <a class = "btn btn-warning" type= "submit" href='.html'>American</a>
-                            <a class = "btn btn-warning" type= "submit" href='.html'>Asian</a>
-                            <a class = "btn btn-warning" type= "submit" href='tapiocaCrepe.html'>Brazilian</a>
-                            <a class = "btn btn-warning" type= "submit" href='.html'>Caribbean</a>
-                            <a class = "btn btn-warning" type= "submit" href='.html'>Chinese</a>
-                            <a class = "btn btn-warning" type= "submit" href='.html'>French</a>
-                            <a class = "btn btn-warning" type= "submit" href='.html'>Greek</a>
-                            <a class = "btn btn-warning" type= "submit" href='.html'>Indian</a>
-                            <a class = "btn btn-warning" type= "submit" href='.html'>Irish</a>
-                            <a class = "btn btn-warning" type= "submit" href='pizza.html'>Italian</a>
-                            <a class = "btn btn-warning" type= "submit" href='.html'>Jamaican</a>
-                            <a class = "btn btn-warning" type= "submit" href='.html'>Mediterranean</a>
-                            <a class = "btn btn-warning" type= "submit" href='.html'>Mexican</a>
+                            <a class = "btn btn-warning" type= "submit">African</a>
+                            <a class = "btn btn-warning" type= "submit">American</a>
+                            <a class = "btn btn-warning" type= "submit">Asian</a>
+                            <a class = "btn btn-warning" type= "submit">Brazilian</a>
+                            <a class = "btn btn-warning" type= "submit">Caribbean</a>
+                            <a class = "btn btn-warning" type= "submit">Chinese</a>
+                            <a class = "btn btn-warning" type= "submit">French</a>
+                            <a class = "btn btn-warning" type= "submit">Greek</a>
+                            <a class = "btn btn-warning" type= "submit">Indian</a>
+                            <a class = "btn btn-warning" type= "submit">Irish</a>
+                            <a class = "btn btn-warning" type= "submit">Italian</a>
+                            <a class = "btn btn-warning" type= "submit">Jamaican</a>
+                            <a class = "btn btn-warning" type= "submit">Mediterranean</a>
+                            <a class = "btn btn-warning" type= "submit">Mexican</a>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="card">
-                <h5 class="mb-0">
-                    <a class = "btn btn-danger" type= "submit" href='random.html'> Randomized Category </a>
-                </h5>
             </div>
         </div>
     </body>

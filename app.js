@@ -11,8 +11,6 @@ const app = express()
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-const API_KEY = keys.spoonacularKey;
-
 // useful reads:
 // --http methods and callback functions--
 // https://www.w3schools.com/tags/ref_httpmethods.asp
@@ -37,10 +35,6 @@ const API_KEY = keys.spoonacularKey;
 
 // let database = pgPromise(dbInfo);
 
-app.get('/spoonacular/search', (req, res) => {
-    req.send
-})
-
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname + '/main_page.html'));
 });
@@ -58,18 +52,30 @@ app.get('/profile', (req, res) => {
 })
 
 app.get('/randomRecipe', (req, res) => {
-    const randomizer = Math.floor(Math.random() * 10 + 1);
-    let requestString = `https://api.spoonacular.com/recipes/random?number=${randomizer}&${API_KEY}`;
+    res.sendFile(path.join(__dirname + '/randomRecipe.html'))
+})
 
-    unirest.get(requestString)
-    .then(res => {
-        // return res.json();
-        console.log('res: ', res.body)
-    })
-    .then(data =>{
-        res.sendFile(path.join(__dirname + '/randomRecipe.html'),{
-        my_title: "recipe",
-        data: data.recipes
+app.get('/randomRecipe/get', (req, res) => {
+    const randomizer = Math.floor(Math.random() * 10 + 1);
+    let randomRecipe = {};
+
+    const request = unirest("GET", "https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/random")
+    request.query({
+        "q": `${randomizer}`
+    });
+    request.headers({
+        "x-rapidapi-host": "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com",
+        "x-rapidapi-key": "d92f1966f5msh90f9f2ce18774fdp13f36bjsn8aad0db9b6f8"
+    });
+    request.end((response) => {
+        if (response.error) console.error('Error my dude: ', response.error);
+        console.log(response.body)
+        res.send({
+            title: response.body.recipes[0].title,
+            readyInMinutes: response.body.recipes[0].readyInMinutes,
+            image: response.body.recipes[0].image,
+            instructions: response.body.recipes[0].instructions,
+            sourceUrl: response.body.recipes[0].sourceUrl
         })
     })
 })
