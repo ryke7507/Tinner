@@ -11,7 +11,6 @@
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
       <link rel="stylesheet" type="text/css" href="profile_page.css">
       <script type="text/javascript" src="./main_page.js"></script>
       <script type="text/javascript" src="./profile_page.js"></script>
@@ -22,9 +21,9 @@
     <div class="container">
           <div class="topnav">
             <img src="./tinner-logo4.png" style="float:left" alt="Tinner Logo" width="170" height="52">
-            <a style= "float:right; font-family: Varela round,serif" href="#news">Logout</a>
-            <a style= "float:right; font-family: Varela round,serif" href="#contact">Food Options</a>
-            <a style= "float:right; font-family: Varela round,serif" href="#about">Home</a>
+            <a style= "float:right; font-family: Varela round,serif">Logout</a>
+            <a style= "float:right; font-family: Varela round,serif">Food Options</a>
+            <a style= "float:right; font-family: Varela round,serif">Home</a>
           </div>
 
         </div>
@@ -33,68 +32,98 @@
 
       <!-- Button to click to show the modals of login or sign up-->
       <div class="container">
-    		<br>
-    		<div class="row">
-    			<div class="col-6">
-    				<div class="card">
-    				  <div class="card-body mx-auto">
-    					<div class="dropdown">
+    <br>
+    <div class="row">
+    <div class="col-6">
+    <div class="card">
+     <div class="card-body mx-auto">
+    <div class="dropdown">
 
-    					  <div id="player_selector" class="dropdown-menu" aria-labelledby="selectPlayerButton">
-    					  </div>
-    					</div>
-    				  </div>
-    				</div>
-    			</div>
-
-
-
-
-          <div class="card" style = "width: 18rem;" style = "length: 20rem">
-            <img id="profile picture" class="card-img-center" src="/Users/apple/Documents/CS/3308/Lab_Website/resources/img/temp_image.svg" alt="Profile picture" height="300px" width="270px">
-            <div class="card-body">
-            </div>
+     <div id="player_selector" class="dropdown-menu" aria-labelledby="selectPlayerButton">
+     </div>
+    </div>
+     </div>
+    </div>
+  </div>
           </div>
-
-          			</div>
-          			<div class="col-8">
+          <div class="col-8">
                   <table class = "table">
                     <tr>
-                      <th style= "font-family: Varela round,serif; font-size:25px" href="#news" >Name<span id="name"></span>
-                        <input type="text" class="form-control" id="username" placeholder="user name"  disabled>
+                      <th style= "font-family: Varela round,serif; font-size:25px" href="#news" >First Name<span id="name"></span>
+                        <input type="text" class="form-control" id="username" placeholder="First Name"  disabled>
                       </th>
 
-        						</tr>
+        </tr>
                     <tr>
-                      <th style= "font-family: Varela round,serif; font-size:25px" href="#news" >Age<span id="age"></span>
-                      <input type="text" class="form-control" id="myage" placeholder="age" disabled></th>
+                      <th style= "font-family: Varela round,serif; font-size:25px" href="#news" >Last Name<span id="age"></span>
+                      <input type="text" class="form-control" id="myage" placeholder="Last Name" disabled></th>
 
-        						</tr>
+        </tr>
                     <tr>
                       <th style= "font-family: Varela round,serif; font-size:25px" href="#news" >Email<span id="email"></span>
-                      <input type="text" class="form-control" id="myemail" placeholder="email" disabled></th>
-        							<td><span id="p_year"></span></td>
-        						</tr>
-                    <tr>
-                      <th style= "font-family: Varela round,serif; font-size:25px" href="#news" >Allergy<span id="allergy"></span>
-                      <input type="text" class="form-control" id="myallergy" placeholder="allergy" disabled></th>
-        							<td><span id="p_year"></span></td>
-        						</tr>
-                    <tr>
-                      <th style= "font-family: Varela round,serif; font-size:25px" href="#news" >liked food</th>
-        							<td><span id="p_year"></span></td>
-        						</tr>
+                      <input type="email" class="form-control" id="myemail" placeholder="Email" disabled></th> <td><span id="p_year"></span></td>
 
+        </tr>
+
+        <div>
+          <h1 style= "font-family: Varela round,serif; font-size:50px"> My Profile </h1>
+        </div>
                 <div class="form-group row">
-            	    <div class="col-sm-5 ">
-            	      <button type="button" style="font-size: 15px" class="btn btn-primary" onclick="info_change()">Edit profile</button>
-                    <button type="button" class="btn btn-primary" onclick="save_change()">Save changes</button>
-            	    </div>
-            	  </div>
-                </div>
-          		</div>
+               <div class="col-sm-5 ">
+                 <button type="button" style="font-size: 16px" class="btn btn-primary" onclick="info_change()">Edit</button>
+               </div>
+               <div class="col-sm-5 ">
+                <button type="button" style="font-size: 16px" class="btn btn-success" onclick="save_change()">Save</button>
+              </div>
+             </div>
 
-          	</div>
+
+             <tr>
+             </br>
+           </br>
+               <th style= "font-family: Varela round,serif; font-size:25px" href="#news" > Liked Recipes <span id="liked foods"></span>
+               </br>
+                 <table class="table">
+                   <thead>
+                     <tr>
+                       <th style= "font-family: Varela round,serif; font-size:18px" class="align-bottom" scope = "col"> # </th>
+                       <th style= "font-family: Varela round,serif; font-size:18px" class="align-bottom" scope = "col">Name of Dish</th>
+                       <th style= "font-family: Varela round,serif; font-size:18px" class="align-bottom" scope = "col">Recipe Link</th>
+                     </tr>
+                   </thead>
+
+                   <tbody>
+                     <tr>
+                       <th scope = "row"> 1 </th>
+                       <td>Greek Garden</td>
+                       <td> <p><button class="btn btn-info" onclick=" window.open('https://www.tasteofhome.com/recipes/greek-garden-appetizer/','_blank')"> Recipe </button></p>
+       </td>
+                     </tr>
+                     <tr>
+                       <th scope = "row"> 2 </th>
+                       <td> Kimchi Fried Rice </td>
+                       <td> <p><button class="btn btn-info" onclick=" window.open('https://www.tasteofhome.com/recipes/kimchi-fried-rice/','_blank')"> Recipe </button></p> </td>
+                     </tr>
+                     <tr>
+                       <th scope = "row"> 3 </th>
+                       <td> Bratwurst Burger </td>
+                       <td> <p><button class="btn btn-info" onclick=" window.open('https://www.tasteofhome.com/recipes/bratwurst-burgers-with-braised-onions/','_blank')"> Recipe </button></p> </td>
+                     </tr>
+
+                     <tr>
+                       <th scope = "row"> 4 </th>
+                       <td> Jerk Chicken </td>
+                       <td> <p><button class="btn btn-info" onclick=" window.open('https://www.seriouseats.com/recipes/2013/08/jerk-chicken.html/','_blank')"> Recipe </button></p> </td>
+                     </tr>
+                   </tbody>
+                   </table>
+               </th>
+
+     </tr>
+                </div>
+          </div>
+
+          </div>
         </div>
 
     </div>
@@ -112,7 +141,6 @@
     document.getElementById('username').disabled = false;
     document.getElementById('myage').disabled = false;
     document.getElementById('myemail').disabled = false;
-    document.getElementById('myallergy').disabled = false;
   }
   function save_change()
   {
@@ -124,7 +152,6 @@
       document.getElementById('username').disabled = true;
       document.getElementById('myage').disabled = true;
       document.getElementById('myemail').disabled = true;
-      document.getElementById('myallergy').disabled = true;
     }
 
   }
