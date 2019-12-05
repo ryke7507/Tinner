@@ -10,6 +10,7 @@
         <script src = "https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"> </script>
         <script src = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <link rel = "stylesheet" type = "text/css" href = "browserPage.css">
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
         <!--script type = "text/javascript" src = "./browserPage.js"></script-->
     </head>
     <body>
@@ -22,5 +23,18 @@
             <a style= "float:right; font-family: Varela round,serif" href="/main_page.html">Home</a>
             </div>
         </div>
+        <div class='randomRecipeData container'>
+            Loading
+        </div>
+        <script>
+            $.getJSON('http://localhost:3000/randomRecipe/get', function(data) {
+                var text = `Title: ${data.title}<br>
+                            readyInMinutes: ${data.readyInMinutes}<br>
+                            instructions: ${data.instructions}<br>
+                            source: ${data.sourceUrl}<br>
+                            image: ${data.image}`
+                $(".randomRecipeData").html(text);
+            });
+        </script>
     </body>
 </html>
