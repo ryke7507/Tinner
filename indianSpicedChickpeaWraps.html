@@ -108,7 +108,7 @@
                         <p><small>A wrap is a food dish made with a soft flatbread rolled around a filling. It is usually classified as a sandwich.
                           The usual flatbreads are wheat tortillas, lavash, or pita;
                           the filling usually consists of cold sliced meat, poultry, or fish accompanied by shredded lettuce,
-                          diced tomato or pico de gallo, guacamole, sauteed mushrooms, bacon, grilled onions, cheese, 
+                          diced tomato or pico de gallo, guacamole, sauteed mushrooms, bacon, grilled onions, cheese,
                           and a sauce, such as ranch or honey mustard.</small></p>
                         <br><br><br>
 
@@ -185,8 +185,9 @@
 
         <div class="btn-group">
             <form action="/send" method="POST">
-                <a class = "btn btn-primary btn-danger btn-lg" type="submit" href = 'random.html'> Maybe Next Time.. </a>
-                <a class = "btn btn-primary btn-success btn-lg" type="submit" href = 'random.html'> Sounds Delicious! </a>
+                <a class = "btn btn-primary btn-danger btn-lg" type="submit" href = 'pizza.html'> Maybe Next Time.. </a>
+                <a class = "btn btn-primary btn-info btn-lg" type="submit" onclick = "popup()"> I like this recipe! </a>
+                <a class = "btn btn-primary btn-success btn-lg" type="submit" href = 'pizza.html'> Sounds Delicious! </a>
             </form>
         </div>
 
@@ -204,6 +205,12 @@
                 <medium> Powered by &#8902 0100 </medium>
             </div>
         </footer>
+        <script>
+        function popup()
+          {
+            alert("You've successfully added this food to the Liked Recipes list on your profile! Go to the profile page to visit the rest of your liked foods or keep browsing recipes!");
+          }
+        </script>
     </body>
 
 </html>

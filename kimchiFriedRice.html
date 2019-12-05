@@ -185,6 +185,7 @@
         <div class="btn-group">
             <form action="/send" method="POST">
                 <a class = "btn btn-primary btn-danger btn-lg" type="submit" href = 'ranchChickenQuesadillas.html'> Maybe Next Time.. </a>
+                <a class = "btn btn-primary btn-info btn-lg" type="submit" onclick = "popup()"> I like this recipe! </a>
                 <a class = "btn btn-primary btn-success btn-lg" type="submit" href = 'ranchChickenQuesadillas.html'> Sounds Delicious! </a>
             </form>
         </div>
@@ -203,6 +204,12 @@
                 <medium> Powered by &#8902 0100 </medium>
             </div>
         </footer>
+        <script>
+        function popup()
+          {
+            alert("You've successfully added this food to the Liked Recipes list on your profile! Go to the profile page to visit the rest of your liked foods or keep browsing recipes!");
+          }
+        </script>
     </body>
 
 </html>

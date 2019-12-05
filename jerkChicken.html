@@ -133,13 +133,13 @@
                     </div>
 
                     <div class="modal-body">
-                        <p><small><em> Jerk </em> is a style of cooking native to Jamaica, in which meat is dry-rubbed 
-                        or wet marinated with a hot spice mixture called <em>Jamaican Jerk Spice.</em> The word 
-                        <em> jerk </em> is said to come from charqui, a Spanish term of Quechua origin for jerked or 
-                        dried meat, which eventually became the word <em> jerky </em> in English. The term <em> jerk spice </em> 
-                        (also commonly known as Jamaican jerk spice) refers to a spice rub. The word <em> jerk </em> refers to the 
-                        spice rub, wet marinade, and to the particular cooking technique. Jerk cooking has developed a 
-                        global following, most notably in the United States, Canadian and Western European 
+                        <p><small><em> Jerk </em> is a style of cooking native to Jamaica, in which meat is dry-rubbed
+                        or wet marinated with a hot spice mixture called <em>Jamaican Jerk Spice.</em> The word
+                        <em> jerk </em> is said to come from charqui, a Spanish term of Quechua origin for jerked or
+                        dried meat, which eventually became the word <em> jerky </em> in English. The term <em> jerk spice </em>
+                        (also commonly known as Jamaican jerk spice) refers to a spice rub. The word <em> jerk </em> refers to the
+                        spice rub, wet marinade, and to the particular cooking technique. Jerk cooking has developed a
+                        global following, most notably in the United States, Canadian and Western European
                         cosmopolitan urban centres.</small></p>
                         <br><br><br>
 
@@ -150,7 +150,7 @@
 
                         <p><medium> <em> Refer </em> a friend this recipe! </medium></p>
                         <br>
-                        
+
                         <div class="btn-group">
                             <!-- <form method="POST"> -->
                                 <!-- <input class="btn btn-warning btn-lg btn-block" type="submit" value="Click me to refer to your friend!"> -->
@@ -218,6 +218,7 @@
         <div class="btn-group">
             <form action="/send" method="POST">
                 <a class = "btn btn-primary btn-danger btn-lg" type="submit" href = 'bratwurstBurger.html'> Maybe Next Time.. </a>
+                <a class = "btn btn-primary btn-info btn-lg" type="submit" onclick = "popup()"> I like this recipe! </a>
                 <a class = "btn btn-primary btn-success btn-lg" type="submit" href = 'bratwurstBurger.html'> Sounds Delicious! </a>
             </form>
         </div>
@@ -236,6 +237,12 @@
                 <medium> Powered by &#8902 0100 </medium>
             </div>
         </footer>
+        <script>
+        function popup()
+          {
+            alert("You've successfully added this food to the Liked Recipes list on your profile! Go to the profile page to visit the rest of your liked foods or keep browsing recipes!");
+          }
+        </script>
     </body>
 
 </html>
