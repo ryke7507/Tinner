@@ -35,32 +35,32 @@
                       <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
                       <img src="login_icon.png" alt="Avatar" class="avatar">
                     </div>
-  
+
                     <div class="container">
                       <label for="uname"><b>Username</b></label>
                       <input type="text" placeholder="Enter Username" name="uname" required>
                     </div>
-  
+
                     <div class="container">
                       <label for="psw"><b>Password</b></label>
                       <input type="password" placeholder="Enter Password" name="psw" required>
                     </div>
-  
+
                     <div class="container">
                       <button type="submit">Login</button>
                     </div>
-  
+
                     <div class="container">
                       <label>
                         <input type="checkbox" checked="checked" name="remember"> Remember me
                       </label>
-  
+
                     </div>
-  
+
                     <div class="container" style="background-color:#f1f1f1">
                       <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
                     </div>
-  
+
                     <div class="container">
                       <span class="psw">Forgot <a href="#">password?</a></span>
                     </div>
@@ -69,43 +69,57 @@
               </div>
         <!-- Selective Categories + Randomized Categories -->
         <div class = "jumbotron jumbotron-fluid">
+          <h1 style="font-family: Varela round, serif">Browse Recipes </h1>
+          <br>
+            <input id="search" >
+          <div class = "btn-group">
+            <button onclick="getrecepesearch(document.getElementById('search').value)">Search</button>
+          </div>
+
+
             <div id = "accordion">
                 <div class="card">
                     <div class="card-header" id="headingOne">
-                        <h5 class="mb-0">
-                            <button class="btn btn-danger collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                Selective Categories
+                        <h2 class="mb-0">
+                            <button style="float:right; font-family: Varela round, serif" class="btn btn-danger collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Select a Category!
                             </button>
-                        </h5>
+                        </h2>
                     </div>
+
                     <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-                        <div class="card-body">
-                            <button onclick="getrecepe1()">African</button>
-                            <button onclick="getrecepe2()">American</button>
-                            <button onclick="getrecepe3()">Asian</button>
-                            <button onclick="getrecepe4()">Brazilian</button>
-                            <button onclick="getrecepe5()">Caribbean</button>
-                            <button onclick="getrecepe6()">Chinese</button>
-                            <button onclick="getrecepe7()">French</button>
-                            <button onclick="getrecepe8()">Greek</button>
-                            <button onclick="getrecepe9()">Indian</button>
-                            <button onclick="getrecepe10()">Irish</button>
-                            <button onclick="getrecepe11()">Italian</button>
-                            <button onclick="getrecepe12()">Mediterranean</button>
-                            <button onclick="getrecepe13()">Mexican</button>
+                        <div class="card">
+                          <h1 class="mb-0">
+                            <a class= "btn btn-warning" onclick="getrecepe1()">African</a>
+                            <a class= "btn btn-warning" onclick="getrecepe2()">American</a>
+                            <a class= "btn btn-warning" onclick="getrecepe3()">Asian</a>
+                            <a class= "btn btn-warning" onclick="getrecepe4()">Brazilian</a>
+                            <a class= "btn btn-warning" onclick="getrecepe5()">Caribbean</a>
+                            <a class= "btn btn-warning" onclick="getrecepe6()">Chinese</a>
+                            <a class= "btn btn-warning" onclick="getrecepe7()">French</a>
+                            <a class= "btn btn-warning" onclick="getrecepe8()">Greek</a>
+                            <a class= "btn btn-warning" onclick="getrecepe9()">Indian</a>
+                            <a class= "btn btn-warning" onclick="getrecepe10()">Irish</a>
+                            <a class= "btn btn-warning" onclick="getrecepe11()">Italian</a>
+                            <a class= "btn btn-warning" onclick="getrecepe12()">Mediterranean</a>
+                            <a class= "btn btn-warning" onclick="getrecepe13()">Mexican</a>
+                          </h1>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="card">
-                <h5 class="mb-0">
-                    <button class= "btn btn-danger" type= "submit" onclick="getreceperand()">Randomized Category</button>
-                </h5>
+                <h4 class="mb-0">
+                    <button style="float:right; font-family: Varela round, serif" class= "btn btn-danger" type= "button" onclick="getreceperand()">Random Categories</button>
+                </h4>
             </div>
-            <input id="search" ><button onclick="getrecepesearch(document.getElementById('search').value)">Search</button>
+            <br>
+
                 <br>
+
             <div id="output"></div>
             <a href="" id="sourceLink"></a>
+
             <br>
 
             <div class="btn-group">
@@ -127,17 +141,20 @@
                                     </button>
 
                                     <div class = "text-center">
-                                        <h3 class="modal-title"> Refer a friend </h3>
+                                        <h3 class="modal-title"> Refer this Recipe to a Friend </h3>
                                     </div>
                                 </div>
 
                                 <div class="modal-body">
-                                 
+
                                   <!-- This is the email part -->
                                   <form action="mailto:YourFriend@email.com" method="post" enctype="text/plain">
-                                    Link: <br>
+                                    Copy the website link of the recipe you wish to send to your
+                                    friend. Hit the "Send" button below, which will pop up your email. Paste the link into the body of the email and send to the
+                                    the desired email!
+
+                                     <br>
                                     <!-- Example link/website -->
-                                    <input type="text" name="Recipe Link" id ="sourceLink" size="50"><br><br>
                                     <br><a href="" id="sourceLink"></a>
                                     Comment: <br>
                                     <input type="text" name="Comment" value = " Hey friend! Check out this recipe!" size="50"> <br> <br>
