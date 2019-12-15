@@ -10,8 +10,9 @@
         	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        	<link rel="stylesheet" type="text/css" href="main_page.css">
+        	<link rel="stylesheet" type="text/css" href="./css/main_page.css">
         	<script type="text/javascript" src="./main_page.js"></script>
+
     </head>
 
       <body>
@@ -19,7 +20,7 @@
         body {
             height: 100%;
             font-family: 'Chalet';
-            background-image: url("tinner-background.png");
+            background-image: url("TinnerFinal/Tinner-master/img/tinner-background.png");
             background-repeat:no-repeat;
             background-size:cover;
         }
@@ -270,9 +271,10 @@
         <div class="container">
           <div id="nav">
             <ul>
-              <img src="./tinner-logo3.png" style="float:left" alt="Tinner Logo" width="177" height="55">
+              <img src="TinnerFinal/Tinner-master/img/tinner-logo3.png" style="float:left" alt="Tinner Logo" width="177" height="55">
                 <li><a style = "font-family: varela round,serif;font-style:bold; font-size:20px" href="profile_page.html">Sign Up</a></li>
-                <li><a style = "font-family: varela round,serif;font-style:bold; font-size:20px" href="browserPage.html">Browse</a></li>
+                <li><a style = "font-family: varela round,serif;font-style:bold; font-size:20px" href = 'profile_page.html'> Profile </a></li>
+                <li><a style = "font-family: varela round,serif;font-style:bold; font-size:20px" href="browserPageAPI.html">Browse</a></li>
                 <li><a style = "font-family: varela round,serif;font-style:bold; font-size:20px" href="main_page.html">Home</a></li>
             </ul>
          </div>
@@ -294,7 +296,7 @@
                 <form class="modal-content animate" action="/action_page.php" method="post">
                   <div class="imgcontainer">
                     <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-                    <img src="login_icon.png" alt="Avatar" class="avatar">
+                    <img src="TinnerFinal/Tinner-master/img/login_icon.png" alt="Avatar" class="avatar">
                   </div>
 
                   <div class="container">
@@ -332,70 +334,48 @@
             <!--Add slideshow here?-->
 
             <br>
+            <div class="container">
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+              <!-- Indicators -->
+              <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+                <li data-target="#myCarousel" data-slide-to="3"></li>
 
-            <div class="slideshow-container">
+              </ol>
 
-            <div class="mySlides fade">
-              <div class="numbertext">1 / 4</div>
-              <img src="slides1.png" style="width:100%">
+              <!-- Wrapper for slides -->
+              <div class="carousel-inner">
+                <div class="item active">
+                  <img src="TinnerFinal/Tinner-master/img/finalSlide1.png" alt="login" style="width:100%;">
+                </div>
+
+                <div class="item">
+                  <img src="TinnerFinal/Tinner-master/img/finalSlide2.png" alt="cuisine" style="width:100%;">
+                </div>
+
+                <div class="item">
+                  <img src="TinnerFinal/Tinner-master/img/finalSlide3.png" alt="browse" style="width:100%;">
+                </div>
+
+                <div class="item">
+                  <img src="TinnerFinal/Tinner-master/img/finalSlide4.png" alt="refer" style="width:100%;">
+                </div>
+              </div>
+
+              <!-- Left and right controls -->
+              <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+                <span class="sr-only">Next</span>
+              </a>
             </div>
+          </div>
 
-            <div class="mySlides fade">
-              <div class="numbertext">2 / 4</div>
-              <img src="slides2.png" style="width:100%">
-            </div>
-
-            <div class="mySlides fade">
-              <div class="numbertext">3 / 4</div>
-              <img src="slides3.png" style="width:100%">
-            </div>
-
-            <div class="mySlides fade">
-              <div class="numbertext">4 / 4</div>
-              <img src="slides4.png" style="width:100%">
-            </div>
-
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-            </div>
-            <br>
-
-            <div style="text-align:center">
-              <span class="dot" onclick="currentSlide(1)"></span>
-              <span class="dot" onclick="currentSlide(2)"></span>
-              <span class="dot" onclick="currentSlide(3)"></span>
-              <span class="dot" onclick="currentSlide(4)"></span>
-            </div>
-
-            <script>
-            var slideIndex = 1;
-            showSlides(slideIndex);
-
-            function plusSlides(n) {
-              showSlides(slideIndex += n);
-            }
-
-            function currentSlide(n) {
-              showSlides(slideIndex = n);
-            }
-
-            function showSlides(n) {
-              var i;
-              var slides = document.getElementsByClassName("mySlides");
-              var dots = document.getElementsByClassName("dot");
-              if (n > slides.length) {slideIndex = 1}
-              if (n < 1) {slideIndex = slides.length}
-              for (i = 0; i < slides.length; i++) {
-                  slides[i].style.display = "none";
-              }
-              for (i = 0; i < dots.length; i++) {
-                  dots[i].className = dots[i].className.replace(" active", "");
-              }
-              slides[slideIndex-1].style.display = "block";
-              dots[slideIndex-1].className += " active";
-            }
-            </script>
 
 
       	</div>

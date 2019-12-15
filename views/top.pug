@@ -1,0 +1,408 @@
+style.
+  input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  }
+  input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  }
+  input[type=submit]:hover {
+  background-color: #45a049;
+  }
+  .dropbtn {
+  background-color: #4CAF50;
+  height: 40px;
+  color: white;
+  top:2px;
+  padding: 6px 10px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  
+  }
+  .dropbtn:hover, .dropbtn:focus {
+  background-color: #409E3A;
+  }
+  .dropdown {
+  position: relative;
+  display: inline-block;
+  }
+  .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 300px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  }
+  .dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  }
+  .dropdown a:hover {background-color: #ddd;}
+  .show {display: block;}
+  .modal-login {
+  color: #636363;
+  width: 350px;
+  }
+  .modal-login .modal-content {
+  padding: 20px;
+  border-radius: 5px;
+  border: none;
+  }
+  .modal-login .modal-header {
+  border-bottom: none;
+  position: relative;
+  justify-content: center;
+  }
+  .modal-login h4 {
+  text-align: center;
+  font-size: 26px;
+  margin: 30px 0 -15px;
+  }
+  .modal-login .form-control:focus {
+  border-color: #70c5c0;
+  }
+  .modal-login .form-control, .modal-login .btn {
+  min-height: 40px;
+  border-radius: 3px;
+  }
+  .modal-login .close {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  }
+  .modal-login .modal-footer {
+  background: #ecf0f1;
+  border-color: #dee4e7;
+  text-align: center;
+  justify-content: center;
+  margin: 0 -20px -20px;
+  border-radius: 5px;
+  font-size: 13px;
+  }
+  .modal-login .modal-footer a {
+  color: #999;
+  }
+  .modal-login .avatar {
+  position: absolute;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  top: -70px;
+  width: 95px;
+  height: 95px;
+  border-radius: 50%;
+  z-index: 9;
+  background: #60c7c1;
+  padding: 15px;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+  }
+  .modal-login .avatar img {
+  width: 100%;
+  }
+  .modal-login.modal-dialog {
+  margin-top: 80px;
+  }
+  .modal-login .btn {
+  color: #fff;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all 0.4s;
+  line-height: normal;
+  border: none;
+  }
+  .modal-login .btn:hover, .modal-login .btn:focus {
+  background: #45aba6;
+  outline: none;
+  }
+  .trigger-btn {
+  display: inline-block;
+  margin: 100px auto;
+  }
+  .dropdown {
+    margin-right: 8px;
+  }
+  /* Style all input fields */
+  input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  }
+  /* Style the submit button */
+  input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  }
+  /* The message box is shown when the user clicks on the password field */
+  #message {
+  display:none;
+  background: #f1f1f1;
+  color: #000;
+  position: relative;
+  padding: 20px;
+  margin-top: 10px;
+  }
+  #message p {
+  padding: 10px 35px;
+  font-size: 18px;
+  }
+  /* Add a green text color and a checkmark when the requirements are right */
+  .valid {
+  color: green;
+  }
+  .valid:before {
+  position: relative;
+  left: -35px;
+  content: '\2713';
+  }
+  /* Add a red text color and an "x" when the requirements are wrong */
+  .invalid {
+  color: red;
+  }
+  .invalid:before {
+  position: relative;
+  left: -35px;
+  content: '\00D7';
+  }
+  #searchbar {
+    margin-top: 16px;
+  }
+
+#myModal.modal.fade
+  .modal-dialog.modal-login
+    .modal-content
+      .modal-header
+        .avatar
+          img(src='https://www.tutorialrepublic.com/examples/images/avatar.png' alt='Avatar')
+        h4.modal-title Sign Up page
+        button.close(type='button' data-dismiss='modal' aria-hidden='true') &times;
+      .modal-body
+        form#sign_up_form(action='/sign_up' method='post')
+          .form-group
+            input#user_name.form-control(type='text' name='user_name' placeholder='UserName' required='required')
+            input#psw.form-control(type='password' name='password' placeholder='Password' required='required')
+          .form-group#confirm_psw
+            input#cpsw.form-control(type='password' name='confirm password' placeholder='Confirm Password' required='required')
+          .form-group
+            button#my_submit_button.btn.btn-primary.btn-block.login-btn(disabled='' type='submit' onclick='this.form.submit()') Sign Up
+            p Alreay have an account? Log in #[a(href='/login' data-toggle='modal') here]
+            
+      .modal-footer
+        #message(style='display:block')
+          h3 Password must contain the following:
+          p#length.invalid
+            | Minimum 
+            b 4 characters
+          p#match.invalid Password and Confirm Password Match
+          
+nav.navbar.navbar-expand-lg.navbar-dark.bg-dark
+  a.navbar-brand(href='#brand' style='text-align: left')
+    h2 ReciMe
+  button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarSupportedContent')
+    span.navbar-toggler-icon
+  #navbarSupportedContent.collapse.navbar-collapse
+    ul.navbar-nav.mr-auto
+      li.nav-item.active
+        a.nav-link(href='/')
+          | Home 
+          span.sr-only (current)
+      li.nav-item
+        a.nav-link(href='/saved_recipes') My Recipes
+      if(!isLoggedIn)
+        li.nav-item  
+          a.nav-link(href='#myModal' data-toggle='modal' onclick='openModal()') Sign Up / Log In
+      if(isLoggedIn)
+        li.nav-item  
+          a.nav-link(href='/log_out') Log Out
+    .dropdown
+      button.dropbtn(onclick='myFunction()') Advanced Search
+      #myDropdown.dropdown-content
+        a(href='/type?search=breakfast') Breakfast
+        a(href='/type?search=appetizer') Appetizer
+        a(href='/type?search=main course') Main Course
+        a(href='/type?search=dessert') Dessert
+        form(action='/action_page.php')
+        button.dropbtn(onclick='cuisine()')  Cuisine
+        #cuisineDropdown.dropdown-content
+          a#Italian(href='/cuisine?search=Italian') Italian
+          a#Indian(href='/cuisine?search=Indian') Indian
+          a#Japanese(href='/cuisine?search=Japanese') Japanese
+          a#Greek(href='/cuisine?search=Greek') Greek
+          a#German(href='/cuisine?search=German') German
+          a#Korean(href='/cuisine?search=Korean') Korean
+          a#Mexican(href='/cuisine?search=Mexican') Mexican
+          a#Mediteranean(href='/cuisine?search=Mediteranean') Mediteranean
+          a#Spanish(href='/cuisine?search=Spanish') Spanish
+          a#Thai(href='/cuisine?search=Thai') Thai
+          a#Vietnamese(href='/cuisine?search=Vietnamese') Vietnamese
+        br
+        br
+        button.dropbtn(onclick='diet()')  Diet
+        #dietDropdown.dropdown-content
+          a#Vegetarian(href='/diet?search=Vegetarian') Vegetarian
+          a#Vegan(href='/diet?search=Vegan') Vegan
+          a#GlutenFree(href='/diet?search=Gluten Free') Gluten Free
+          a#Ketogenic(href='/diet?search=Ketogenic') Ketogenic
+          a#Pescetarian(href='/diet?search=Pescetarian') Pescetarian
+          a#Paleo(href='/diet?search=Paleo') Paleo
+          a#Primal(href='/diet?search=Primal') Primal
+        br
+        br
+        button.dropbtn(onclick='allergy()')  Allergies (Exclude)
+        #allergyDropdown.dropdown-content
+          form#search_form(action='/exclude' method='post')
+            .form-group
+              p Dairy
+                input#dairy(name='dairy' type='checkbox' value="vegan" required='required')
+              p Vegan
+                input#vegan(name ='egg' value="egg" type='checkbox' required='required')
+              p Peanut
+                input#vegan(name ='peanut' type='checkbox' value="peanut" required='required')
+              p Seafood
+                input#dairy(name='seafood' type='checkbox' value="seafood" required='required')
+              p Shellfish
+                input#vegan(name= 'shellfish' type='checkbox' value="shellfish" required='required')
+              p Soy
+                input#vegan(name='soy' type='checkbox' value="soy" required='required')
+              p Wheat
+                input#vegan(name= 'wheat' type='checkbox' value="wheat" required='required')
+              p Gluten
+                input#vegan(name='gluten' type='checkbox' value="gluten" required='required')
+            .form-group
+              button#my_submit_button.btn.btn-primary.btn-block.login-btn(type='submit' onclick='this.form.submit()') Search
+        
+    script.
+      /* When the user clicks on the button,
+      toggle between hiding and showing the dropdown content */
+      function myFunction() {
+      document.getElementById("myDropdown").classList.toggle("show");
+      }
+      function cuisine() {
+      document.getElementById("cuisineDropdown").classList.toggle("show");
+      }
+      function diet() {
+      document.getElementById("dietDropdown").classList.toggle("show");
+      }
+      function allergy() {
+      document.getElementById("allergyDropdown").classList.toggle("show");
+      }
+      // Close the dropdown if the user clicks outside of it
+      window.onclick = function(event) {
+      console.log(event.target.id);
+      //- if(event.target.id=='min' || event.target.id=='max')
+      //- {
+      //- }
+      //- else {
+      //- if (!event.target.matches('.dropbtn')) {
+      //- var dropdowns = document.getElementsByClassName("dropdown-content");
+      //- var i;
+      //- for (i = 0; i < dropdowns.length; i++) {
+      //- var openDropdown = dropdowns[i];
+      //- if (openDropdown.classList.contains('show')) {
+      //- openDropdown.classList.remove('show');
+      //- }
+      //- }
+      //- }
+      //- }
+      }
+    
+    form.form-inline.my-2.my-lg-0(action="/search" method="get")
+      input.form-control.mr-sm-2(type='search' placeholder='Search' name="search", id = "searchbar")
+      button.btn.btn-outline-success.my-2.my-sm-0(type='submit' onclick="this.form.submit()") Search
+
+
+script.
+  function openModal() {
+  /* Note that you do NOT have to do a document.getElementById anywhere in this exercise. Use the elements below */
+  var myInput = document.getElementById("psw");
+  var confirmMyInput = document.getElementById("cpsw");
+  var letter = document.getElementById("letter");
+  var capital = document.getElementById("capital");
+  var number = document.getElementById("number");
+  var length = document.getElementById("length");
+  var match = document.getElementById("match");
+  // When the user starts to type something inside the password field
+  myInput.onkeyup = function() {
+  console.log('helllooo');
+  /* TODO: Question 1.1: Starts here */
+  var lowerCaseLetters = /[a-z]+/g; // : Fill in the regular experssion for lowerCaseLetters
+  var upperCaseLetters = /[A-Z]+/g; // : Fill in the regular experssion for upperCaseLetters
+  var numbers = /[0-9]+/g; // : Fill in the regular experssion for digits
+  var minLength = 4; // : Change the minimum length to what what it needs to be in the question
+  /* TODO: Question 1.1: Ends here */
+  /* TODO: Question 1.2:  Starts here */
+  /*
+  - So first read up on classList.
+  - Perform a console.log(letter.classList) and check the array that you see. By default the first time, there should be just 1 element and it should be
+  "invalid". "invalid" is a class that is present in login.css.
+  - Below, there are a bunch of if blocks and else blocks.
+  - Each if block means that some successful condition is satisfied for our password conditon. So the red cross need to be converted to a check mark.
+  - Each else block stands for a failed condition, so the green check mark needs to be a red cross again.
+  - All that you need to do is, in each of the blocks, fill in the correct classNames for the remove and the add methods.
+  */
+  // Validate length
+  if(myInput.value.length >= minLength) {
+  length.classList.remove("invalid");
+  length.classList.add("valid");
+  } else {
+  length.classList.remove("valid");
+  length.classList.add("invalid");
+  }
+  /* TODO: Question 1.2:  Ends here */
+  }
+  /* TODO Question 1.3: Starts here */
+  confirmMyInput.onkeyup = function() {
+  // Validate password and confirmPassword
+  var passEqualsConfPass = (myInput.value == confirmMyInput.value); // TODO: Change this to the condition that needs to be checked so that the text entered in password equals the text in confirm password
+  if(passEqualsConfPass) {
+  match.classList.remove("invalid");
+  match.classList.add("valid");
+  } else {
+  match.classList.remove("valid");
+  match.classList.add("invalid");
+  }
+  // Disable or Enable the button based on the elements in classList
+  enableButton(length, match);
+  }
+  }
+
+
+  function enableButton(length, match) {
+  // TODO: Clear this function for students to implement
+  var button = document.getElementById('my_submit_button');
+  var condition = length.classList.contains("valid") &&match.classList.contains("valid"); // TODO: Replace false with the correct condition
+  if(condition) {
+  button.disabled = false;
+  }
+  }
+
+  function loginChange(){
+  var form = document.getElementById("sign_up_form");
+  form.removeChild(document.getElementById("confirm_psw"));
+  document.getElementById("my_submit_button").innerHTML.value= "Log in";
+  match.classList.remove("invalid");
+  match.classList.add("valid");
+
+  openModal();
+  }

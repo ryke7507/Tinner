@@ -4,6 +4,7 @@ const { Pool, Client } = require('pg'); //package for handling postgress
 const keys = require('./keys');  // get spoonacular api key
 const pgPromise = require('pg-promise');
 const nodeFetch = require('node-fetch');
+var passport = require("passport");
 const bodyParser = require('body-parser'); // Add the body-parser tool has been added
 const unirest = require('unirest');
 
@@ -22,25 +23,24 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // https://medium.com/@Alibaba_Cloud/building-a-restful-api-with-express-postgresql-and-node-using-es6-1de2b3b06c64
 
 
-// PSQL Connectors, still not sure what this is doing.
-// https://spoonacular.com/food-api/docs#Search-Recipes
+const pug = require('pug');
+const pgp = require('pg-promise')();
 
-// const dbInfo = {
-// 	host: 'localhost',
-// 	port: 4000,
-// 	database: 'food',
-// 	user: 'postgres',
-// 	password: 'secure-password69'
-// };
+const dbConfig = {
+host: 'localhost',
+port: 5432,
+database: 'food',
+user: 'postgres',
+password: 'halalmeat'
+};
 
-// let database = pgPromise(dbInfo);
+let database = pgp(dbConfig);
+
+app.set('view engine', 'pug');
+
 
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname + '/main_page.html'));
-});
-
-app.get('/browserPage', (req, res) => {
-    res.sendFile(path.join(__dirname + '/browserPage.html'));
 });
 
 app.get('/foodOptionsStart', (req, res) => {
@@ -51,8 +51,8 @@ app.get('/profile', (req, res) => {
     res.sendFile(path.join(__dirname + '/profile_page.html'))
 })
 
-app.get('/randomRecipe', (req, res) => {
-    res.sendFile(path.join(__dirname + '/randomRecipe.html'))
+app.get('/browserPage', (req, res) => {
+    res.sendFile(path.join(__dirname + '/browserPageAPI.html'))
 })
 
 app.get('/randomRecipe/get', (req, res) => {
@@ -79,6 +79,76 @@ app.get('/randomRecipe/get', (req, res) => {
         })
     })
 })
+
+app.get('/login', async function(req, res) {
+
+    res.render('/login',{
+    });
+
+  });
+
+  app.get('/log_out', function(req, res) {
+
+    req.session.destroy();
+    res.redirect('/');
+  });
+
+
+  app.post('/login', function(req, res) {
+  
+    var query1 = `SELECT * FROM users;`;
+    var password=req.body.password;
+    var user_name=req.body.user_name;
+  
+    db.any(query1)
+          .then(function (data) {
+            req.session.log = false;
+            var suc = "The log-in info you have provided does not match.";
+            for(var i=0; i<data.length; i++){
+              var db_user = data[i].user_name;
+              var db_user_password = data[i].password;
+              if(user_name == db_user){
+
+                if(password == db_user_password){
+                  req.session.pass = password;
+                  req.session.user = user_name;
+                  req.session.log = true;
+                  suc = "Succesfully logged in!"
+                }
+              }
+            }
+            if(req.session.log == false){
+              res.render('/login',{
+                my_title: "Saved Recipes",
+                d: suc
+              })
+            }
+            else{
+              res.redirect('/');
+            }
+          })
+          .catch(function (err) {
+
+              console.log(err)
+              res.render('/saved_recipes', {
+                  title: 'Saved Recipes',
+                  d: ''
+              })
+          })
+  });
+  app.post('/sign_up', function(req, res) {
+
+    var query1 = `SELECT * FROM users;`;
+    var password=req.body.password;
+    var user_name=req.body.user_name;
+
+    var add_user=`INSERT INTO users(user_name, password) VALUES ('${user_name}', '${password}');`;
+
+    db.query(add_user);
+
+  res.render('/login')
+
+  });
 
 
 //write to db when hitting sounds delecious button
