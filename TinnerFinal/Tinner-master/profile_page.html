@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+  <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Tinner</title>
+      <link href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round" rel="stylesheet">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <link rel="stylesheet" type="text/css" href="./css/profile_page.css">
+      <script type="text/javascript" src="./js/main_page.js"></script>
+      <script type="text/javascript" src="./js/profile_page.js"></script>
+      <script src="./profile_page.js"></script>
+</head>
+
+  <body>
+    <div class="container">
+          <div class="topnav">
+            <img src="./img/tinner-logo4.png" style="float:left" alt="Tinner Logo" width="170" height="52">
+            <a style= "float:right; font-family: Varela round,serif">Logout</a>
+            <a style= "float:right; font-family: Varela round,serif" type= "submit" href='browserPageAPI.html'>Browse</a>
+            <a style= "float:right; font-family: Varela round,serif" type= "submit" href='main_page.html' >Home</a>
+          </div>
+
+        </div>
+
+    <div class="jumbotron jumbotron-fluid">
+
+      <!-- Button to click to show the modals of login or sign up-->
+      <div class="container">
+    <br>
+    <div class="row">
+    <div class="col-6">
+    <div class="card">
+     <div class="card-body mx-auto">
+    <div class="dropdown">
+
+     <div id="player_selector" class="dropdown-menu" aria-labelledby="selectPlayerButton">
+     </div>
+    </div>
+     </div>
+    </div>
+  </div>
+          </div>
+          <div class="col-8">
+                  <table class = "table">
+                    <tr>
+                      <th style= "font-family: Varela round,serif; font-size:25px">First Name<span id="name"></span>
+                        <input type="text" class="form-control" id="username" placeholder="First Name"  disabled>
+                      </th>
+
+        </tr>
+                    <tr>
+                      <th style= "font-family: Varela round,serif; font-size:25px" >Last Name<span id="age"></span>
+                      <input type="text" class="form-control" id="myage" placeholder="Last Name" disabled></th>
+
+        </tr>
+                    <tr>
+                      <th style= "font-family: Varela round,serif; font-size:25px" >Email<span id="email"></span>
+                      <input type="email" class="form-control" id="myemail" placeholder="Email" disabled></th> <td><span id="p_year"></span></td>
+
+        </tr>
+
+        <div>
+          <h1 style= "font-family: Varela round,serif; font-size:50px"> My Profile </h1>
+        </div>
+                <div class="form-group row">
+               <div class="col-sm-5 ">
+                 <button type="button" style="font-size: 16px" class="btn btn-primary" onclick="info_change()">Edit</button>
+               </div>
+               <div class="col-sm-5 ">
+                <button type="button" style="font-size: 16px" class="btn btn-success" onclick="save_change()">Save</button>
+              </div>
+             </div>
+
+
+             <tr>
+             </br>
+           </br>
+
+                   </table>
+               </th>
+
+     </tr>
+                </div>
+          </div>
+
+          </div>
+        </div>
+
+    </div>
+
+
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body>
+  <script>
+  function info_change()
+  {
+    document.getElementById('username').disabled = false;
+    document.getElementById('myage').disabled = false;
+    document.getElementById('myemail').disabled = false;
+  }
+  function save_change()
+  {
+    if (document.getElementById('username').disabled == true)
+    {
+      alert("No changes to save.");
+    }
+    else {
+      document.getElementById('username').disabled = true;
+      document.getElementById('myage').disabled = true;
+      document.getElementById('myemail').disabled = true;
+    }
+
+  }
+</script>
+
+</body>
+</html>

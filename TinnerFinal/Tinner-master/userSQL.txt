@@ -1,0 +1,29 @@
+Below is what I used to make the database and two tables of users information.
+The INSERT statements are purely dumy data for now until I have the node.js working to connect them to the sign in page.
+
+
+
+
+create database users_db
+
+\c users_db
+
+CREATE TABLE IF NOT EXISTS user_profile(
+first_name VARCHAR(20),
+last_name VARCHAR(20),
+email VARCHAR(50) NOT NULL,
+password VARCHAR(30) NOT NULL),
+likes text[],
+allergies text[]);
+
+
+INSERT INTO user_profile(first_name, last_name, email, password, likes, allergies) 
+VALUES ('Name1','Last1','email1@fake.com','password1','{"recipe1","recipe2"}','{"nuts","gluten"}'),('Name2','Last2','email2@fake.com','password2','{"recipe3","recipe4"}','{"peanuts"}'),('Name3','Last3','email3@fake.com','password3','{"recipe5","recipe6"}','{"eggs","shellfish"}');
+
+
+// food db
+
+CREATE TABLE IF NOT EXISTS food(name VARCHAR(50) NOT NULL, cuisine VARCHAR (20), ingredients text[] NOT NULL, instructions text[], instructionsLink text[], image bytea);
+
+INSERT INTO food(name, cuisine, ingredient, instructions, instructionsLink, image)
+VALUES ('Milk Steak', 'Philedelphia', '{'1 medium 8.8oz. (.25Kg) flat iron steak (top blade shoulder steak)', '2 cup milk (preferably whole, called "4%")', '1/4 cup honey', '1/2 tsp cinnamon', '1/2 tsp nutmeg', '1 tsp vanilla extract', '1/2 cup Jelly Belly® jelly beans'}', '{https://www.wikihow.com/Make-Milk-Steak-With-Jelly-Beans}', NULL)
