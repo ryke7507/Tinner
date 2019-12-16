@@ -22,34 +22,34 @@ This product is to help users find their preferred and interested recipe. Users 
 
 ## Repo Structure
 ├── README.md<br>
-├── package-lock.json
-├── package.json
-├── userSQL.txt
-│   ├── css
-│   │   ├── broweserPage.css
-│   │   ├── main_page.css
-│   │   ├── profile_page.css
-│   │   ├── random.css
-│   ├── img
-│   │   ├── finalSlide1.PNG
-│   │   ├── finalSlide2.PNG
-│   │   ├── finalSlide3.PNG
-│   │   ├── finalSlide4.PNG
-│   │   ├── login_icon.png
-│   │   ├── tinder.otf
-│   │   ├── tinner-background.png
-│   │   ├── tinner-icon.png
-│   │   ├── tinner-logo1.png
-│   │   ├── tinner-logo2.png
-│   │   ├── tinner-logo3.png
-│   │   ├── tinner-logo4.png
-│   │   ├── tinner-logos.pdf
-│   ├── js
-│   │   ├── app.js
-│   │   ├── food.js
-│   │   ├── login.js
-│   │   ├── main_page.js
-│   │   ├── profile_page.js
+├── package-lock.json<br>
+├── package.json<br>
+├── userSQL.txt<br>
+│   ├── css<br>
+│   │   ├── broweserPage.css<br>
+│   │   ├── main_page.css<br>
+│   │   ├── profile_page.css<br>
+│   │   ├── random.css<br>
+│   ├── img<br>
+│   │   ├── finalSlide1.PNG<br>
+│   │   ├── finalSlide2.PNG<br>
+│   │   ├── finalSlide3.PNG<br>
+│   │   ├── finalSlide4.PNG<br>
+│   │   ├── login_icon.png<br>
+│   │   ├── tinder.otf<br>
+│   │   ├── tinner-background.png<br>
+│   │   ├── tinner-icon.png<br>
+│   │   ├── tinner-logo1.png<br>
+│   │   ├── tinner-logo2.png<br>
+│   │   ├── tinner-logo3.png<br>
+│   │   ├── tinner-logo4.png<br>
+│   │   ├── tinner-logos.pdf<br>
+│   ├── js<br>
+│   │   ├── app.js<br>
+│   │   ├── food.js<br>
+│   │   ├── login.js<br>
+│   │   ├── main_page.js<br>
+│   │   ├── profile_page.js<br>
 
 
 
