@@ -88,4 +88,4 @@ app.post("/send", function(req, res) {
 
 app.use(express.static(__dirname + '/'));
 
-app.listen(3000);
+app.listen(process.env.PORT || 3000);
