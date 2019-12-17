@@ -1,7 +1,7 @@
 const express = require('express');
 const path = require('path');
 const { Pool, Client } = require('pg'); //package for handling postgress
-const keys = require('./keys');  // get spoonacular api key
+//const keys = require('./keys');  // get spoonacular api key
 const pgPromise = require('pg-promise');
 const nodeFetch = require('node-fetch');
 var passport = require("passport");
