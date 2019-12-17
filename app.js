@@ -1,7 +1,7 @@
 const express = require('express');
 const path = require('path');
 const { Pool, Client } = require('pg'); //package for handling postgress
-const keys = require('./keys');  // get spoonacular api key
+//const keys = require('./keys');  // get spoonacular api key
 const pgPromise = require('pg-promise');
 const nodeFetch = require('node-fetch');
 var passport = require("passport");
@@ -158,4 +158,4 @@ app.post("/send", function(req, res) {
 
 app.use(express.static(__dirname + '/'));
 
-app.listen(3000);
+app.listen(process.env.PORT, '0.0.0.0');
